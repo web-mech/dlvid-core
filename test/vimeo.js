@@ -15,10 +15,10 @@ describe('vimeo', function() {
     });
   });
 
-  describe('getInfo', function() {
+  describe('info', function() {
     it('Should get meta-data information about a certain clip', function(done) {
       var ve = new VimeoExtractor(config);
-      ve.getInfo(url).done(function(result) {
+      ve.info(url).done(function(result) {
         assert(result.request instanceof Object);
         assert(result.request.files instanceof Object);
         assert(typeof result.video.title === 'string');
@@ -30,7 +30,7 @@ describe('vimeo', function() {
   describe('selectFiles', function() {
     it('Can select a file type with no options passed', function(done) {
       var ve = new VimeoExtractor(config);
-      ve.getInfo(url).done(function(data) {
+      ve.info(url).done(function(data) {
         var files = data.request.files,
           fileInfo = ve.selectFile(files, {});
         assert(fileInfo.codec === 'h264');
@@ -41,7 +41,7 @@ describe('vimeo', function() {
 
     it('Will fall back to what is available when an invalid filter is passed', function(done) {
       var ve = new VimeoExtractor(config);
-      ve.getInfo(url).done(function(data) {
+      ve.info(url).done(function(data) {
         var files = data.request.files,
           fileInfo = ve.selectFile(files, {
             type: 'vp8',
