@@ -3,10 +3,11 @@ var assert = require('better-assert'),
   fs = require('fs'),
   streamAssert = require('stream-equal'),
   VimeoExtractor = require('../lib/extractors/vimeo'),
-  config = require('../lib/config/config');
-
+  config = require('../lib/config/config'),
+  url = 'https://vimeo.com/50872925';
+  
 describe('vimeo', function() {
-  var url = 'https://vimeo.com/50872925';
+  
   describe('getId', function() {
     it('Should return ids of vimeo clips', function() {
       var ve = new VimeoExtractor(config);

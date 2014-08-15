@@ -16,7 +16,6 @@ describe('youtube', function() {
       });
     });
   });
-
   describe('download', function() {
     it('Should download a file', function(done) {
       var yte = new YouTubeExtractor();
