@@ -7,7 +7,7 @@ var assert = require('better-assert'),
 
 describe('youtube', function() {
   var url = 'http://www.youtube.com/watch?v=GfAnyT9QitU';
-  describe('getInfo', function() {
+  describe('info', function() {
     it('Should get video results from a specified url', function(done) {
       var yte = new YouTubeExtractor();
       yte.info(url).done(function(info) {
