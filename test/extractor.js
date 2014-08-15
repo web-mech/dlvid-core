@@ -1,7 +1,7 @@
 var assert = require('better-assert');
 var Extractor = require('../lib/extractors/extractor');
 
-describe('extractor',function(){
+describe('Extractor',function(){
   describe('get', function(){
     it('Should get data from a url', function(done){
       var extractor = new Extractor(),
