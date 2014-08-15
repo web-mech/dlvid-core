@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/web-mech/movgrab.git"
+    "url": "git@github.com:web-mech/dlvid-core.git"
   },
   "keywords": [
     "video",
@@ -22,9 +22,9 @@
   "author": "WebMech <webmech@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/web-mech/movgrab/issues"
+    "url": "https://github.com/web-mech/dlvid-core/issues"
   },
-  "homepage": "https://github.com/web-mech/movgrab",
+  "homepage": "https://github.com/web-mech/dlvid-core",
   "devDependencies": {
     "better-assert": "^1.0.1",
     "mocha": "^1.21.4",
