@@ -4,9 +4,8 @@
   "description": "Download videos from websites (core component)",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R nyan -t 50000"
+    "test": "./node_modules/.bin/mocha -R spec -t 50000"
   },
-  "bin": "./bin/index",
   "repository": {
     "type": "git",
     "url": "git://github.com/web-mech/movgrab.git"
@@ -28,7 +27,8 @@
   "homepage": "https://github.com/web-mech/movgrab",
   "devDependencies": {
     "better-assert": "^1.0.1",
-    "mocha": "^1.21.4"
+    "mocha": "^1.21.4",
+    "stream-equal": "^0.1.5"
   },
   "dependencies": {
     "class": "^0.1.4",
