@@ -1,4 +1,4 @@
-#dvlvid-core 
+#dlvid-core 
 
 (Ver. 1.0.0)
 
