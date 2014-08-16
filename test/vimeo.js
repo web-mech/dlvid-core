@@ -29,7 +29,7 @@ describe('VimeoExtractor', function() {
   });
 
   describe('selectFiles', function() {
-    it('Can select a file type with no options passed', function(done) {
+    it('Should select a file type with no options passed', function(done) {
       var ve = new VimeoExtractor(config);
       ve.info(url).done(function(data) {
         var files = data.request.files,
@@ -40,7 +40,7 @@ describe('VimeoExtractor', function() {
       });
     });
 
-    it('Will fall back to what is available when an invalid filter is passed', function(done) {
+    it('Should fall back to what is available when an invalid filter is passed', function(done) {
       var ve = new VimeoExtractor(config);
       ve.info(url).done(function(data) {
         var files = data.request.files,
@@ -56,7 +56,7 @@ describe('VimeoExtractor', function() {
   });
 
   describe('download', function() {
-    it('Will download a file from vimeo', function(done) {
+    it('Should download a file from vimeo', function(done) {
       var video = path.resolve(__dirname, 'files/vimeo'),
         ve = new VimeoExtractor(config),
         vidStream = fs.createReadStream(video);
