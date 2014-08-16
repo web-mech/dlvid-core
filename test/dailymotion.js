@@ -8,6 +8,15 @@ var assert = require('better-assert'),
   url = 'http://www.dailymotion.com/video/xb64yc_movie-countdown-google-videos-2_shortfilms';
 
 describe('DailyMotionExtractor', function() {
+  describe('getId', function() {
+    it('Should return id of a dailymotion clip', function(done){
+      var de = new DailyMotionExtractor(config);
+      var id = de.getId(url);
+      assert(id === 'xb64yc_movie-countdown-google-videos-2_shortfilms');
+      done();
+    });
+  });
+
   describe('info', function() {
     it('Should get meta-data information about a certain clip', function(done) {
       var dm = new DailyMotionExtractor(config);
