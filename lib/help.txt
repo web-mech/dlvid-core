@@ -1,2 +1,0 @@
-Download videos from websites
-(c) 2014 by Michael Price, MIT License
