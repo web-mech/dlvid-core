@@ -1,5 +1,7 @@
 #dlvid-core 
 
+[![Build Status](https://travis-ci.org/web-mech/dlvid-core.png?branch=master)](https://travis-ci.org/web-mech/dlvid-core)
+
 (Ver. 1.0.0)
 
 A driver for downloading video sources from various sites.
