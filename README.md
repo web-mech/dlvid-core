@@ -15,7 +15,8 @@ All downloaders are implemented using the deferred interface (Q). These calls re
 
 ##Usage
   
-
+###Downloading
+Downloading a file is simple. Simply pass the url to the extractor of choice and pipe the response to what ever stream you need.
 #####Youtube
 
 ```
@@ -43,6 +44,14 @@ download.done(function(file){
 	file.pipe(fs.createWriteStream('movie.mp4'));
 });
 ``` 	
+
+###Information
+If you'd just like to gather information about the file available, you can do that as well.
+```
+var info = dlvid.youtube.info('http://...').done(function(data){
+  // do whatever you need to do
+});
+```
 
 ###Testing
 
