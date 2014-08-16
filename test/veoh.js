@@ -17,21 +17,21 @@ describe('VeohExtractor', function() {
     });
   });
   describe('info', function() {
-    it('Should get meta-data information about a certain clip', function(done){
+    it('Should get meta-data information about a certain clip', function(done) {
       var ve = new VeohExtractor(config);
-      ve.info(url).done(function(info){
+      ve.info(url).done(function(info) {
         assert(info.rsp.videoList instanceof Array);
         done();
       });
     });
   });
   describe('download', function() {
-    it('Should download a file from veoh', function(done){
+    it('Should download a file from veoh', function(done) {
       var video = path.resolve(__dirname, 'files/veoh'),
         ve = new VeohExtractor(config),
         vidStream = fs.createReadStream(video);
 
-      ve.download(url).done(function(file){
+      ve.download(url).done(function(file) {
         streamAssert(vidStream, file, function(err, equals) {
           assert(equals);
           assert(file instanceof Stream);
