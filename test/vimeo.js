@@ -6,7 +6,7 @@ var assert = require('better-assert'),
   config = require('../lib/config/config'),
   url = 'https://vimeo.com/50872925';
   
-describe('vimeo', function() {
+describe('VimeoExtractor', function() {
   
   describe('getId', function() {
     it('Should return ids of vimeo clips', function() {

@@ -5,7 +5,7 @@ var assert = require('better-assert'),
   streamAssert = require('stream-equal'),
   YouTubeExtractor = require('../lib/extractors/youtube');
 
-describe('youtube', function() {
+describe('YouTubeExtractor', function() {
   var url = 'http://www.youtube.com/watch?v=GfAnyT9QitU';
   describe('info', function() {
     it('Should get video results from a specified url', function(done) {
