@@ -1,27 +1,30 @@
 var assert = require('better-assert'),
   path = require('path'),
   fs = require('fs'),
-  Stream = require('stream'), 
+  Stream = require('stream'),
   streamAssert = require('stream-equal'),
   DailyMotionExtractor = require('../lib/extractors/dailymotion'),
   config = require('../lib/config/config'),
   url = 'http://www.dailymotion.com/video/xb64yc_movie-countdown-google-videos-2_shortfilms';
 
-  describe('DailyMotionExtractor', function(){
-    it('Should download video information', function(done){
+describe('DailyMotionExtractor', function() {
+  describe('info', function() {
+    it('Should get meta-data information about a certain clip', function(done) {
       var dm = new DailyMotionExtractor(config);
-      dm.info(url).done(function(){
+      dm.info(url).done(function() {
         assert(arguments.length);
         done();
       });
     });
+  });
 
-    it('Should download video', function(done){
+  describe('download', function() {
+    it('Should download video', function(done) {
       var video = path.resolve(__dirname, 'files/dailymotion'),
         dm = new DailyMotionExtractor(config),
         vidStream = fs.createReadStream(video);
 
-      dm.download(url).done(function(file){
+      dm.download(url).done(function(file) {
         streamAssert(vidStream, file, function(err, equals) {
           assert(equals);
           assert(file instanceof Stream);
@@ -30,3 +33,4 @@ var assert = require('better-assert'),
       });
     });
   });
+});
