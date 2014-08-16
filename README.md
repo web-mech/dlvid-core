@@ -1,5 +1,5 @@
 #dvlvid-core 
-===============
+
 (Ver. 1.0.0)
 
 A driver for downloading video sources from various sites.
