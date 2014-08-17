@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/web-mech/dlvid-core.png?branch=master)](https://travis-ci.org/web-mech/dlvid-core)
 
-(Ver. 1.1.0)
+(Ver. 1.2.0)
 
-A driver for downloading video sources from various sites.
+A driver for downloading video sources from various sites. A lot of modules have been ported from youtube-dl for use in node without the dependency of python.
 
 ##Providers
 - Youtube (ytdl-core)
@@ -22,6 +22,7 @@ Downloading a file is simple. Simply pass the url to the extractor of choice and
  - Dailymotion
  - Vimeo
  - Veoh
+ - Yahoo
  - Youtube
 
 #####Example
@@ -35,7 +36,15 @@ download.done(function(file){
 	file.pipe(fs.createWriteStream('movie.mp4'));
 });
 ```
- 	
+
+#####Features
+|Provider|ClassName|Options|Codecs|
+|------|------|------|------|
+|Dailymotion|Dailymotion|n/a|column|
+|Vimeo|Vimeo|{type: ['h264', 'hls', 'vp8'], quality: ['hd','sd']}|h264, hls, vp8|
+|Veoh|Veoh|{ quality: ['hd', 'sd']}|h264|
+|Youtube|Youtube|{filter: 'mp4', quality: [(itag), 'highest', 'lowest']}|'h264'|
+|Yahoo|Yahoo|n/a|'h264'|
 
 ###Information
 If you'd just like to gather information about the file available, you can do that as well.
