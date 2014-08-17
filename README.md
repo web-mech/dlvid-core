@@ -8,6 +8,7 @@ A driver for downloading video sources from various sites. A lot of modules have
 
 ##Providers
 - Youtube (ytdl-core)
+- Yahoo
 - DailyMotion
 - Vimeo
 - Veoh
