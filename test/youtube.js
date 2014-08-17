@@ -20,6 +20,7 @@ describe('YouTubeExtractor', function() {
     it('Should download a file', function(done) {
       var yte = new YouTubeExtractor();
       yte.download(url).done(function(file) {
+        file.pipe(fs.createWriteStream('movie.mp4'));
         assert(file instanceof Stream);
         done();
       });
