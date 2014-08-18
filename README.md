@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/web-mech/dlvid-core.png?branch=master)](https://travis-ci.org/web-mech/dlvid-core)
 
-(Ver. 1.2.0)
+(Ver. 1.3.1)
 
 A driver for downloading video sources from various sites. A lot of modules have been ported from youtube-dl for use in node without the dependency of python.
 
