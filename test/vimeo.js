@@ -9,7 +9,7 @@ var assert = require('better-assert'),
 describe('VimeoExtractor', function() {
   
   describe('getId', function() {
-    it('Should return ids of vimeo clips', function() {
+    it('Should return ids of a vimeo clip', function() {
       var ve = new VimeoExtractor(config);
       var ids = ve.getId(url);
       assert(ids === '50872925');
