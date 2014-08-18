@@ -38,6 +38,10 @@ download.done(function(file){
 });
 ```
 
+#####Supported Providers
+
+See the current list [here](https://github.com/web-mech/dlvid-core/blob/master/support.md)
+
 ###Information
 If you'd just like to gather information about the file available, you can do that as well.
 
