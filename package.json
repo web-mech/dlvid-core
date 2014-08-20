@@ -1,6 +1,6 @@
 {
   "name": "dlvid-core",
-  "version": "1.3.4",
+  "version": "1.3.4-1",
   "description": "Download videos from websites (core component)",
   "main": "lib/index.js",
   "scripts": {
