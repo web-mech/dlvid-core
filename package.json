@@ -1,14 +1,14 @@
 {
   "name": "dlvid-core",
-  "version": "1.3.4-2",
-  "description": "Download videos from websites (core component)",
+  "version": "1.3.5",
+  "description": "Download videos from websites.",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R spec -t 50000"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:web-mech/dlvid-core.git"
+    "url": "git://github.com/web-mech/dlvid-core.git"
   },
   "keywords": [
     "video",
@@ -17,9 +17,10 @@
     "dailymotion",
     "vimeo",
     "online",
-    "embed"
+    "embed",
+    "download"
   ],
-  "author": "WebMech <webmech@gmail.com>",
+  "author": "Michael Price",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/web-mech/dlvid-core/issues"
